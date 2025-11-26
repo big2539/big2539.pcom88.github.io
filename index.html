@@ -1,155 +1,191 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>แชร์ให้เพื่อน/กลุ่ม</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>✨ แชร์เครดิตฟรี 100 บาท ✨</title>
 
-  <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+    <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
 
-  <style>
-    body {
-      margin: 0;
-      background: linear-gradient(180deg, #1c0035, #25004f, #33006e);
-      font-family: "Prompt", sans-serif;
-      text-align: center;
-      color: white;
-      overflow-x: hidden;
-    }
-
-    .container {
-      padding: 40px 20px;
-      animation: fadeIn 1.2s ease;
-    }
-
-    .main-img {
-      width: 100%;
-      max-width: 420px;
-      border-radius: 16px;
-      box-shadow: 0 0 20px rgba(255, 0, 255, 0.4);
-      animation: float 3s ease-in-out infinite;
-    }
-
-    button {
-      margin-top: 25px;
-      background: linear-gradient(45deg, #ff00c8, #6d00ff);
-      padding: 18px 32px;
-      border: none;
-      border-radius: 18px;
-      color: #fff;
-      font-size: 20px;
-      font-weight: bold;
-      cursor: pointer;
-      width: 90%;
-      max-width: 360px;
-      box-shadow: 0 0 25px rgba(255, 0, 255, 0.35);
-      animation: fadeInUp 1s ease;
-      transition: 0.2s;
-    }
-
-    button:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 30px rgba(255, 0, 255, 0.55);
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes float {
-      0% { transform: translateY(0); }
-      50% { transform: translateY(-8px); }
-      100% { transform: translateY(0); }
-    }
-  </style>
-</head>
-
-<body>
-  <div class="container">
-    <img src="https://img2.pic.in.th/pic/06f27946-b50d-4d15-b476-e2c9259e6662da19f3a00225fb05.jpg" class="main-img">
-
-    <button onclick="shareFlex()">✨ กดแชร์ให้เพื่อน/กลุ่ม ✨</button>
-  </div>
-
-  <script>
-    const liffId = "2008464608-AD0VpwZ3";
-
-    async function main() {
-      await liff.init({ liffId });
-    }
-    main();
-
-    async function shareFlex() {
-
-      const flexMessage = {
-        type: "flex",
-        altText: "🎁 รับเครดิตฟรี 100 บาท!",
-        contents: {
-          type: "bubble",
-          size: "mega",
-          hero: {
-            type: "image",
-            url: "https://img2.pic.in.th/pic/06f27946-b50d-4d15-b476-e2c9259e6662da19f3a00225fb05.jpg",
-            size: "full",
-            aspectMode: "cover",
-            aspectRatio: "1:1"
-          },
-
-          body: {
-            type: "box",
-            layout: "vertical",
-            spacing: "md",
-            backgroundColor: "#25004f",
-            paddingAll: "20px",
-            contents: [
-              {
-                type: "text",
-                text: "🧧เครดิตฟรีฟรี100.-🧧",
-                weight: "bold",
-                size: "xl",
-                align: "center",
-                color: "#ffffff"
-              },
-
-              {
-                type: "button",
-                style: "primary",
-                color: "#ff00c8",
-                action: {
-                  type: "uri",
-                  label: "กดรับเครดิตฟรี",
-                  uri: "https://lin.ee/auilvqo"
-                }
-              },
-
-              {
-                type: "button",
-                style: "primary",
-                color: "#6d00ff",
-                action: {
-                  type: "uri",
-                  label: "รับโปรโมชั่น",
-                  uri: "https://porsches88.com/"
-                }
-              }
-            ]
-          },
-
-          styles: {
-            body: { backgroundColor: "#1c0035" },
-            footer: { backgroundColor: "#1c0035" }
-          }
+    <style>
+        body {
+            background: linear-gradient(180deg, #ffffff, #f7f7f7, #f0f0f0);
+            font-family: 'Prompt', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
         }
-      };
 
-      await liff.shareTargetPicker([flexMessage]);
+        .box {
+            background: #ffffff;
+            width: 92%;
+            max-width: 450px;
+            padding: 25px;
+            border-radius: 18px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            text-align: center;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {opacity: 0; transform: translateY(20px);}
+            to {opacity: 1; transform: translateY(0);}
+        }
+
+        .title {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #c2185b; /* ชมพูเข้ม เข้ากับรูป */
+            margin-bottom: 20px;
+        }
+
+        .banner {
+            width: 100%;
+            border-radius: 12px;
+            border: 3px solid #ff80ab; /* ชมพูพาสเทล */
+            margin-bottom: 12px;
+        }
+
+        .caption {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #d81b60; /* ชมพูโทนเดียวกับภาพ */
+            margin-bottom: 15px;
+        }
+
+        .share-btn {
+            width: 100%;
+            padding: 15px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 30px;
+            background: linear-gradient(90deg, #ff4081, #f50057);
+            color: white;
+            font-weight: 700;
+            cursor: pointer;
+            animation: pulse 1.5s infinite ease-in-out;
+        }
+
+        @keyframes pulse {
+            0% {transform: scale(1);}
+            50% {transform: scale(1.05);}
+            100% {transform: scale(1);}
+        }
+
+        .footer {
+            margin-top: 12px;
+            font-size: 0.85rem;
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <div class="title">🎁 รับเครดิตฟรี 100 บาท 🎁</div>
+
+    <img src="https://img2.pic.in.th/pic/06f27946-b50d-4d15-b476-e2c9259e6662da19f3a00225fb05.jpg"
+         class="banner">
+
+    <div class="caption">แชร์ให้เพื่อน รับเครดิตฟรีทันที!</div>
+
+    <button class="share-btn" onclick="shareFlex()">✨ กดแชร์ให้เพื่อน/กลุ่ม ✨</button>
+
+    <div class="footer">เงื่อนไขเป็นไปตามที่เว็บไซต์กำหนด</div>
+</div>
+
+<script>
+    const LIFF_ID = "2008464608-VYRDZ97E";
+
+    window.onload = () => {
+        liff.init({ liffId: LIFF_ID });
+    };
+
+    function shareFlex() {
+        if (!liff.isApiAvailable("shareTargetPicker")) {
+            alert("กรุณาเปิดหน้านี้ในแอป LINE เท่านั้น");
+            return;
+        }
+
+        const flex = {
+            type: "flex",
+            altText: "รับเครดิตฟรี 100 บาท!",
+            contents: {
+                type: "bubble",
+                styles: {
+                    header: { backgroundColor: "#ffe4ec" },
+                    hero: { backgroundColor: "#ffffff" },
+                    body: { backgroundColor: "#fff0f6" },
+                    footer: { backgroundColor: "#fff0f6" }
+                },
+                header: {
+                    type: "box",
+                    layout: "vertical",
+                    contents: [{
+                        type: "text",
+                        text: "✨ รับเครดิตฟรี 100 บาททันที! ✨",
+                        weight: "bold",
+                        size: "lg",
+                        color: "#c2185b",
+                        align: "center"
+                    }]
+                },
+                hero: {
+                    type: "image",
+                    url: "https://img2.pic.in.th/pic/06f27946-b50d-4d15-b476-e2c9259e6662da19f3a00225fb05.jpg",
+                    size: "full",
+                    aspectRatio: "20:13",
+                    aspectMode: "cover"
+                },
+                body: {
+                    type: "box",
+                    layout: "vertical",
+                    contents: [
+                        {
+                            type: "text",
+                            text: "แชร์ให้เพื่อนแล้วรับทุนฟรี 100.- ได้เลย!",
+                            wrap: true,
+                            align: "center",
+                            color: "#ad1457"
+                        }
+                    ]
+                },
+                footer: {
+                    type: "box",
+                    layout: "vertical",
+                    spacing: "md",
+                    contents: [
+                        {
+                            type: "button",
+                            style: "primary",
+                            color: "#ff4081",
+                            action: {
+                                type: "uri",
+                                label: "🧧เครดิตฟรีฟรี100.-🧧",
+                                uri: "https://lin.ee/auilvqo"
+                            }
+                        },
+                        {
+                            type: "button",
+                            style: "secondary",
+                            color: "#f06292",
+                            action: {
+                                type: "uri",
+                                label: "🎰รับโปรโมชั่น🎰",
+                                uri: "https://winnerslot88.com"
+                            }
+                        }
+                    ]
+                }
+            }
+        };
+
+        liff.shareTargetPicker([flex]);
     }
-  </script>
+</script>
+
 </body>
 </html>
